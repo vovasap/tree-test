@@ -1,0 +1,55 @@
+.ag-cell:not(.group) .group-btn {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.ag-cell {
+  .group-cell {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    overflow: auto;
+  
+    .group-btn {
+      width: 12px;
+      height: 12px;
+      background: url('@/assets/icons/chevron.svg') no-repeat center/contain;
+      transform: rotateZ(0.75turn);
+      &.expanded {
+        transform: none;
+      }
+    }
+  
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-left: auto;
+      padding-left: 10px;
+  
+      .add,
+      .remove {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: url('@/assets/icons/plus.svg') no-repeat center/60%;
+        background-color: #2378D7;
+        transition: all 0.3s;
+  
+        &:active {
+          scale: 0.9;
+        }
+  
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+  
+      .remove {
+        background: url('../icons/cross.svg') no-repeat center/70%;
+        background-color: #D22328;
+      }
+    }
+  }
+}
